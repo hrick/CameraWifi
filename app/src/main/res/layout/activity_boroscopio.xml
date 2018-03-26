@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <com.henrique.camerawifi.MjpegView
+            android:id="@+id/videoView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"/>
+
+        <ImageButton
+            android:id="@+id/btTakePicture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right|center"
+            android:layout_margin="15dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:onClick="actionTakePicture" />
+
+        <FrameLayout
+            android:id="@+id/flConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/btConfirm"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="right|top"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:onClick="actionSavePicture" />
+
+            <ImageButton
+                android:id="@+id/btCancel"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:onClick="actionDiscardPicture" />
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/view_progress_select_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9d000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</RelativeLayout>
